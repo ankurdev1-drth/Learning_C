@@ -13,7 +13,8 @@ int main(void)
 	while (n>0) {
 	digit = n % 10;
 	if (digit_seen[digit])
-	  break;
+	  {	pritnf("Repeated digit: %d\n", digit);
+		break;}
 	digit_seen[digit] = true;
 	n /= 10;
 	}
