@@ -1,0 +1,4 @@
+//Reads a message and translates it in biff communique:
+#include <stdio.h>
+{	printf("Enter message: 	");
+	}
