@@ -10,6 +10,7 @@ int num_digits(int n) {
 	while (n > 0) {
 	n = n/10;
 	count++;}
+	return count;
 }
 
 int main(void)
