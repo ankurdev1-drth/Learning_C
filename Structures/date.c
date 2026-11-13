@@ -19,7 +19,15 @@ int day_of_year(struct date d){
 }
 
 int compare_dates(struct date d1, struct date d2){
-	 	}
+	 	if (d1.year != d2.year)
+		return d1.year < d2.year ? -1:1;
+		if (d1.month != d2.month)
+		return d1.month < d2.month ? -1:1;
+		if (d1.day != d2.day)
+		return d1.day < d2.day ? -1:1;
+		return 0;
+	
+}
 
 
 int main(void) {
@@ -27,6 +35,7 @@ int main(void) {
     struct date b = {12, 31, 2023};  /* non-leap year */
     printf("%d\n", day_of_year(a));  /* 61 */
     printf("%d\n", day_of_year(b));  /* 365 */
+    printf("%d\n", compare_dates(a, b));
     return 0;
 }
 
